@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int test_cases;
+	cin>>test_cases;
+	int i = 0;
+	while(test_cases--){
+		long long int product;
+		product = 1;
+		int n;
+		cin>>n;
+		for (i=0; i<n; ++i){
+			int x;
+			cin>>x;
+			product = product*x;
+		}
+		int least_sig_digit = product%10;
+		if(least_sig_digit == 2 || least_sig_digit == 3 || least_sig_digit == 5){
+			cout<<"YES"<<endl;
+		}
+		else{
+			cout<<"NO"<<endl;
+		}
+	}
+}
